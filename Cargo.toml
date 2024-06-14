@@ -2,9 +2,16 @@
 name = "porttest"
 version = "0.1.0"
 edition = "2021"
+default-run = "porttest"
 
 [dependencies]
 axum = "0.7.5"
 env_logger = "0.11.3"
 log = "0.4.21"
 tokio = { version = "1.38.0", features = ["macros", "rt", "rt-multi-thread"] }
+
+[[bin]]
+name = "porttest"
+path = "src/main.rs"
+test = false
+bench = false
